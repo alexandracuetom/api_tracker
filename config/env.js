@@ -3,4 +3,10 @@ import { config } from 'dotenv';
 //config({path: '.env'}); old version
 config( { path: `.env.${process.env.NODE_ENV || 'development'}.local` });
 
-export const { PORT, NODE_ENV, DB_URI } = process.env; //ACCESS FROM ENVIRONMENT VARIABLE
+export const { PORT,
+    NODE_ENV, 
+    DB_URI,
+    JWT_SECRET,
+    JWT_EXPIRES_IN } = process.env; //ACCESS FROM ENVIRONMENT VARIABLE
+
+     
