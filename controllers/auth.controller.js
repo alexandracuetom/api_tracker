@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 import User from '../models/user.model.js';
-import { JWT_SECRET, JWT_EXPIRES_IN} from '../config/env.js';
+import {JWT_SECRET, JWT_EXPIRES_IN} from '../config/env.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+
 
 export const signUp = async(req, res, next) => {
     //session of a mongoose transaction
