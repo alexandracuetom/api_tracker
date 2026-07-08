@@ -1,17 +1,17 @@
 # API Subscription Tracker
 
 ## About the project
-1. Description
+### 1. Description
 This is an API subscription tracker which allows to keep track of which users have subscribed to which services. By making HTTP requests one can take a look to the subscriptions the associated user has payed for as long as they have permission to do so since authentication and authorization measures have been implemented to make sure no unauthorized person can access sensible information.
 
 Essentially, this would be the backbone of a real-world app such as Netflix, but a much smaller scale and with limited functionality, of course.
 
 This project is great for getting started in the API world and learning some basic yet truly important concepts on the matter.
 
-2. Motivation
+### 2. Motivation
 This project was born with the idea to dig deeper into the API world, but since it was a strange topic to me I decided to follow and build along a project using a tutorial I found online. By doing so I was able to follow some general guidelines and solve any problems that arose on my own, meaning I was being given code to work with but had to solve any bugs by myself while also having to substitute some parts of the code since some functions were deprecated. 
 
-3. Built with
+### 3. Built with
 * [![Node.js][Node.js]][Node-url]
 * [![Express][Express.js]][Express-url]
 * [![MondoDB][MongoDB]][MongoDB-url]
