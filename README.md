@@ -36,6 +36,51 @@ This project was born with the idea to dig deeper into the API world, but since 
 
 ## Resources used
 
+Below are linked all the extra resources along with the documentation used for the dvelopment of this project.
+
+### Main tutorial
+
+* [JavaScript Mastery YouTube Tutorial](https://www.youtube.com/watch?v=ha_leEpnT30)
+* [YouTube Tutorial Reference](https://www.youtube.com/watch?v=Oh6SeuOMnV4)
+
+### Express and API development
+
+* [Express.js Error Handling Guide](https://expressjs.com/en/5x/guide/error-handling/)
+* [Access Your REST APIs with HTTPie](https://medium.com/@javatechie/access-your-rest-apis-with-httpie-8a144b0b76d1)
+* [Mastering REST API Design Best Practices](https://medium.com/@syedabdullahrahman/mastering-rest-api-design-essential-best-practices-dos-and-don-ts-for-2024-dd41a2c59133)
+
+### Node.js and npm
+
+* [npm package.json Documentation](https://docs.npmjs.com/cli/v11/configuring-npm/package-json)
+
+### JavaScript concepts
+
+* [MDN JavaScript `let` Statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)
+* [MDN JavaScript Destructuring Assignment](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Destructuring)
+
+### MongoDB and Mongoose
+
+* [Mongoose Transactions Documentation](https://mongoosejs.com/docs/transactions.html)
+
+### Authentication and JWT
+
+* [JWT Introduction](https://www.jwt.io/introduction#why-use-json-web-tokens)
+* [JWT for Dummies](https://medium.com/@shivam_bathla/jwt-for-dummies-79a381244ce8)
+
+### Rate limiting and security
+
+* [Understanding the Token Bucket Algorithm for Rate Limiting](https://medium.com/@0xTanzim/understanding-the-token-bucket-algorithm-for-rate-limiting-fccdf80e27ca)
+
+### Development environment and tooling
+
+* [How do I install Tkinter? — Reddit discussion](https://www.reddit.com/r/learnpython/comments/wlan8q/how_do_i_install_tkinter/)
+
+### README and documentation
+
+* [A Beginner’s Guide to Writing a Kickass README](https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template/blob/main/README.md?plain=1)
+
+
 
 
 
