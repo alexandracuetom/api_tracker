@@ -4,14 +4,14 @@
 ### 1. Description
 This is an API subscription tracker which allows to keep track of which users have subscribed to which services. By making HTTP requests one can take a look to the subscriptions the associated user has payed for as long as they have permission to do so since authentication and authorization measures have been implemented to make sure no unauthorized person can access sensible information.
 
-Essentially, this would be the backbone of a real-world app such as Netflix, but a much smaller scale and with limited functionality, of course.
+Essentially, this would be the backbone of a real-world app such as Netflix, but at a much smaller scale and with limited functionality, of course.
 
 This project is great for getting started in the API world and learning some basic yet truly important concepts on the matter.
 
 ### 2. Motivation
-This project was born with the idea to dig deeper into the API world, but since it was a strange topic to me I decided to follow and build along a project using a tutorial I found online. By doing so I was able to follow some general guidelines and solve any problems that arose on my own, meaning I was being given code to work with but had to solve any bugs by myself while also having to substitute some parts of the code since some functions were deprecated. 
+This project was born with the idea to dig deeper into the API world, but since it was an unexplored topic to me I decided to follow and build along a project using a tutorial I found online. By doing so I was able to follow some general guidelines and solve any problems that arose on my own, meaning I was being given code to work with but had to solve any bugs by myself while also having to substitute some parts of the code since some functions were deprecated. 
 
-### 3. Built with
+### 3. Technologies used
 * [![Node.js][Node.js]][Node-url]
 * [![Express][Express.js]][Express-url]
 * [![MondoDB][MongoDB]][MongoDB-url]
@@ -24,15 +24,107 @@ This project was born with the idea to dig deeper into the API world, but since 
 
 ## Getting started
 
+The project is ready to run locally, but it requires a few environment variables and external services to be configured beforehand.
+
+You need to have installed:
+- Node.js
+- npm
+- MongoDB database or MongoDB Atlas
+- Upstash/Qstash 
+- HTTPie
+
+### 2. Installation
+
+Clone the repository:
+```
+git clone https://github.com/alexandracuetom/api_tracker.git
+```
+
+Move into the project folder:
+```
+cd API_TRACKER
+```
+
+Install dependencies:
+```
+npm install
+```
+
+**Create a .env.development.local file in the root of the project:**
+
+`touch .env.development.local`
+
+Add the required environment variables:
+
+> Remember to replace the variables with your values
+
+`PORT=5500`
+`NODE_ENV=development`
+
+`SERVER_URL=http://localhost:5500`
+
+`MONGODB_URI=your_mongodb_connection_string`
+
+`JWT_SECRET=your_jwt_secret`
+`JWT_EXPIRES_IN=7d`
+
+`QSTASH_URL=http://127.0.0.1:8080`
+`QSTASH_TOKEN=your_local_qstash_token`
+`QSTASH_CURRENT_SIGNING_KEY=your_current_signing_key`
+`QSTASH_NEXT_SIGNING_KEY=your_next_signing_key`
+
+`ARCJET_KEY=your_arcjet_key`
+
+**Run Qstash locally in a different terminal**
+`npx @upstash/qstash-cli dev`
+
+Copy the local QStash values printed in the terminal into your `.env.development.local file.`
+
+**Run the API**
+Start the development server:
+
+`npm run dev`
+
+The API should be running at:
+
+`http://localhost:5500`
 
 ## Usage
+You can test the endpoints using HTTPie, Postman or any API client.
 
+1. Create a new user
 
-## Lessons learnt
+`http POST http://localhost:5500/api/v1/auth/sign-up \`
+  `name="Alexandra" \`
+ ` email="name_here@example.com" \`
+  p`assword="password123"`
 
+2. Sign in with an existing user:
+`http POST http://localhost:5500/api/v1/auth/sign-in \`
+  `email="name_here@example.com" \`
+  `password="password123"`
 
-## Future/possible improvements
+The API will return a JWT token. Use this token to access protected routes.
 
+Example:
+
+`http GET http://localhost:5500/api/v1/subscriptions \`
+  `Authorization:"Bearer YOUR_TOKEN_HERE"`
+
+3. Create a subscription
+`http POST http://localhost:5500/api/v1/subscriptions \`
+  `Authorization:"Bearer YOUR_TOKEN_HERE" \`
+  `name="Netflix" \`
+  `price:=15.99 \`
+  `currency="EUR" \`
+  `frequency="monthly" \`
+  `category="fashion" \`
+  `startDate="2026-02-01T00:00:00.000Z" \`
+  `paymentMethod="Credit Card"`
+
+4. Get subscriptions for a user:
+`http GET http://localhost:5500/api/v1/subscriptions/USER_ID \`
+  `Authorization:"Bearer YOUR_TOKEN_HERE"`
 
 ## Resources used
 
@@ -41,7 +133,7 @@ Below are linked all the extra resources along with the documentation used for t
 ### Main tutorial
 
 * [JavaScript Mastery YouTube Tutorial](https://www.youtube.com/watch?v=ha_leEpnT30)
-* [YouTube Tutorial Reference](https://www.youtube.com/watch?v=Oh6SeuOMnV4)
+
 
 ### Express and API development
 
@@ -66,9 +158,6 @@ Below are linked all the extra resources along with the documentation used for t
 
 * [JWT Introduction](https://www.jwt.io/introduction#why-use-json-web-tokens)
 * [JWT for Dummies](https://medium.com/@shivam_bathla/jwt-for-dummies-79a381244ce8)
-
-### Rate limiting and security
-
 * [Understanding the Token Bucket Algorithm for Rate Limiting](https://medium.com/@0xTanzim/understanding-the-token-bucket-algorithm-for-rate-limiting-fccdf80e27ca)
 
 ### Development environment and tooling
