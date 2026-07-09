@@ -79,14 +79,20 @@ QSTASH_CURRENT_SIGNING_KEY=your_current_signing_key
 QSTASH_NEXT_SIGNING_KEY=your_next_signing_key
 ```
 
-`ARCJET_KEY=your_arcjet_key`
+```
+ARCJET_KEY=your_arcjet_key
+```
 
 **Run Qstash locally in a different terminal**
-`npx @upstash/qstash-cli dev`
+
+```
+npx @upstash/qstash-cli dev
+```
 
 Copy the local QStash values printed in the terminal into your `.env.development.local file.`
 
 **Run the API**
+
 Start the development server:
 
 `npm run dev`
@@ -100,37 +106,49 @@ You can test the endpoints using HTTPie, Postman or any API client.
 
 1. Create a new user
 
-`http POST http://localhost:5500/api/v1/auth/sign-up \`
-  `name="Alexandra" \`
- ` email="name_here@example.com" \`
-  p`assword="password123"`
+```
+http POST http://localhost:5500/api/v1/auth/sign-up \
+  name="Alexandra" \
+  email="name_here@example.com" 
+  password="password123"
+```
 
 2. Sign in with an existing user:
-`http POST http://localhost:5500/api/v1/auth/sign-in \`
-  `email="name_here@example.com" \`
-  `password="password123"`
+```
+http POST http://localhost:5500/api/v1/auth/sign-in \
+  email="name_here@example.com" \
+  password="password123"
+```
 
 The API will return a JWT token. Use this token to access protected routes.
 
 Example:
 
-`http GET http://localhost:5500/api/v1/subscriptions \`
-  `Authorization:"Bearer YOUR_TOKEN_HERE"`
+```
+http GET http://localhost:5500/api/v1/subscriptions \
+  Authorization:"Bearer YOUR_TOKEN_HERE"
+```
 
 3. Create a subscription
-`http POST http://localhost:5500/api/v1/subscriptions \`
-  `Authorization:"Bearer YOUR_TOKEN_HERE" \`
-  `name="Netflix" \`
-  `price:=15.99 \`
-  `currency="EUR" \`
-  `frequency="monthly" \`
-  `category="fashion" \`
-  `startDate="2026-02-01T00:00:00.000Z" \`
-  `paymentMethod="Credit Card"`
+
+```
+http POST http://localhost:5500/api/v1/subscriptions \
+  Authorization:"Bearer YOUR_TOKEN_HERE" \
+  name="Netflix" \
+  price:=15.99 \
+  currency="EUR" \
+  frequency="monthly" \
+  category="fashion" \
+  startDate="2026-02-01T00:00:00.000Z" \
+  paymentMethod="Credit Card"
+```
 
 4. Get subscriptions for a user:
-`http GET http://localhost:5500/api/v1/subscriptions/USER_ID \`
-  `Authorization:"Bearer YOUR_TOKEN_HERE"`
+
+```
+http GET http://localhost:5500/api/v1/subscriptions/USER_ID \
+  Authorization:"Bearer YOUR_TOKEN_HERE"
+```
 
 ## Resources used
 
