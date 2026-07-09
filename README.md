@@ -33,7 +33,7 @@ You need to have installed:
 - Upstash/Qstash 
 - HTTPie
 
-### 2. Installation
+### Installation
 
 Clone the repository:
 ```
@@ -58,20 +58,26 @@ Add the required environment variables:
 
 > Remember to replace the variables with your values
 
-`PORT=5500`
-`NODE_ENV=development`
-
-`SERVER_URL=http://localhost:5500`
-
-`MONGODB_URI=your_mongodb_connection_string`
-
-`JWT_SECRET=your_jwt_secret`
-`JWT_EXPIRES_IN=7d`
-
-`QSTASH_URL=http://127.0.0.1:8080`
-`QSTASH_TOKEN=your_local_qstash_token`
-`QSTASH_CURRENT_SIGNING_KEY=your_current_signing_key`
-`QSTASH_NEXT_SIGNING_KEY=your_next_signing_key`
+```
+PORT=5500
+NODE_ENV=development
+````
+```
+SERVER_URL=http://localhost:5500
+```
+```
+MONGODB_URI=your_mongodb_connection_string
+```
+```
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRES_IN=7d
+```
+```
+QSTASH_URL=http://127.0.0.1:8080
+QSTASH_TOKEN=your_local_qstash_token
+QSTASH_CURRENT_SIGNING_KEY=your_current_signing_key
+QSTASH_NEXT_SIGNING_KEY=your_next_signing_key
+```
 
 `ARCJET_KEY=your_arcjet_key`
 
